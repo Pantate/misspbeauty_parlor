@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>misspbeauty_parlor | Bulawayo, Zimbabwe — 100% Virgin Hair, Luxury Dresses & Shoes</title>
+  <meta name="description" content="Shop misspbeauty_parlor: Zimbabwe's premier online fashion & hair store. 100% human hair wigs, lace frontals, dresses, shoes, and salon styles. Choose your custom colors, lengths, and sizes with instant WhatsApp checkout!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <div class="announcement-left">
+        <span><i class="fa-solid fa-sparkles text-gold"></i> <strong>FLASH SALE: Up to 35% OFF</strong> on 100% Virgin Hair, Pretty Dresses & Heels | Free Delivery in Bulawayo CBD 💕</span>
+      </div>
+      <div class="announcement-links">
+        <button class="upload-top-btn" onclick="openUploadModal()"><i class="fa-solid fa-camera"></i> Take / Upload Photo</button>
+        <span class="divider">|</span>
+        <button class="size-guide-btn" onclick="openSizeGuideModal()"><i class="fa-solid fa-ruler-combined"></i> Size & Length Guide</button>
+        <span class="divider">|</span>
+        <div class="currency-picker">
+          <label for="currency-select"><i class="fa-solid fa-coins"></i> Currency:</label>
+          <select id="currency-select" aria-label="Select currency">
+            <option value="USD" selected>USD ($)</option>
+            <option value="ZiG">ZiG (Local)</option>
+            <option value="ZAR">ZAR (R)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="main-header" id="header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-mark"><i class="fa-solid fa-crown"></i></div>
+        <div class="logo-text">
+          <span class="logo-name">misspbeauty_parlor</span>
+          <span class="logo-tagline">✨ Bulawayo Glam Boutique & Salon Hub</span>
+        </div>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="header-search">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="search-input" placeholder="Search 100% human hair, lengths (18-32''), colors, dresses, heels..." aria-label="Search products and salons">
+        <button id="search-clear-btn" class="clear-search-btn" title="Clear search"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <!-- Photo Upload Button -->
+        <button class="btn btn-upload-header" onclick="openUploadModal()" title="Take or upload photos">
+          <i class="fa-solid fa-camera"></i>
+          <span class="action-text">Post Photo</span>
+        </button>
+
+        <a href="https://wa.me/263785505967?text=Hello%20misspbeauty_parlor!%20I'm%20browsing%20your%20online%20store%20and%20would%20like%20to%20order." target="_blank" class="btn btn-whatsapp-header" title="Chat on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span class="action-text">+263 78 550 5967</span>
+        </a>
+
+        <button class="action-icon-btn" id="wishlist-toggle-btn" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge" id="wishlist-badge">0</span>
+        </button>
+
+        <button class="action-icon-btn" id="cart-toggle-btn" aria-label="Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="badge" id="cart-badge">0</span>
+        </button>
+
+        <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Menu & Quick Categories -->
+    <nav class="nav-bar">
+      <div class="container nav-container">
+        <ul class="nav-links">
+          <li><a href="#catalog" class="nav-link active" data-filter="all"><i class="fa-solid fa-sparkles"></i> All Items</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter="hair"><i class="fa-solid fa-crown"></i> 100% Virgin Hair (8"-42")</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter="dresses"><i class="fa-solid fa-person-dress"></i> Luxury Dresses</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter="jeans"><i class="fa-solid fa-vest-patches"></i> Denim & Jeans</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter="bags"><i class="fa-solid fa-bag-shopping"></i> Luxury Bags</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter="tshirts"><i class="fa-solid fa-shirt"></i> Glam T-Shirts</a></li>
+          <li><a href="#catalog" class="nav-link" data-filter="shoes"><i class="fa-solid fa-shoe-prints"></i> Designer Shoes</a></li>
+          <li><a href="#salons" class="nav-link" data-filter="salons"><i class="fa-solid fa-scissors"></i> Hairdressing & Styles</a></li>
+          <li><a href="#brands" class="nav-link highlight-link" data-filter="promotions"><i class="fa-solid fa-star"></i> Brand Ads & Deals</a></li>
+        </ul>
+        <div class="store-badge">
+          <i class="fa-solid fa-location-dot"></i> Bulawayo CBD (Fife Street) & Express Delivery Nationwide
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Banner Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-trend-badge">
+          <i class="fa-solid fa-wand-magic-sparkles text-gold"></i> 💖 PRETTY GLAMOUR & LUXURY BEAUTY 💖
+        </div>
+        <h1 class="hero-title">Custom Lengths (8"–42"), Colors & Sizes: <span class="text-gold">100% Virgin Hair</span> & Glamour Couture</h1>
+        <p class="hero-subtitle">
+          Shop Bulawayo's interactive beauty destination. Pick your exact hair length (8" to 42"), hair color swatches, dress fit, denim sizes, designer bags, and shoes. Pure product visuals with same-day Bulawayo delivery and nationwide courier.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#catalog" class="btn btn-primary btn-lg"><i class="fa-solid fa-bag-shopping"></i> Explore Store</a>
+          <button class="btn btn-gold btn-lg" onclick="openSizeGuideModal()"><i class="fa-solid fa-ruler"></i> View Size & Length Guide</button>
+          <button class="btn btn-outline btn-lg" onclick="openUploadModal()"><i class="fa-solid fa-camera"></i> Take / Upload Picture</button>
+        </div>
+
+        <div class="contact-quick-strip">
+          <span><i class="fa-brands fa-whatsapp text-whatsapp"></i> WhatsApp Order Line: <strong>+263 78 550 5967</strong></span>
+          <span><i class="fa-solid fa-phone text-gold"></i> Calls: <strong>0714895272</strong></span>
+          <span><i class="fa-solid fa-truck-fast"></i> Bulawayo CBD Same-Day Pickup</span>
+        </div>
+
+        <div class="hero-features-grid">
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-palette text-gold"></i>
+            <div>
+              <strong>Multi-Color Swatches</strong>
+              <span>Natural 1B, 613, Burgundy, Ombre</span>
+            </div>
+          </div>
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-ruler-combined text-gold"></i>
+            <div>
+              <strong>Custom Lengths (8"-42")</strong>
+              <span>Double-drawn full thickness</span>
+            </div>
+          </div>
+          <div class="hero-feature-item">
+            <i class="fa-brands fa-whatsapp text-whatsapp"></i>
+            <div>
+              <strong>1-Click WhatsApp Order</strong>
+              <span>Instant SKU checkout to store</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Product Spotlight -->
+      <div class="hero-featured-wrapper">
+        <div class="spotlight-card">
+          <div class="spotlight-badge">HOTTEST DEAL OF THE WEEK</div>
+          <div class="spotlight-image-box">
+            <img src="https://files.catbox.moe/2ratyz.jpg" alt="Miss P Signature Bone Straight HD Lace Human Hair Wig (8-42 inches)" id="hero-spotlight-img">
+            <span class="spotlight-tag">SAVE $75 (30% OFF)</span>
+          </div>
+          <div class="spotlight-details">
+            <span class="spotlight-category">100% Brazilian Human Hair • misspbeauty_parlor</span>
+            <h3 class="spotlight-title">Bone Straight 13x4 HD Frontal Wig (Grade 12A)</h3>
+            <p class="spotlight-desc">Double drawn, cuticle aligned, zero shedding. Customize your length, density, and color below.</p>
+            
+            <!-- Interactive Mini Swatches on Spotlight Card -->
+            <div class="spotlight-quick-swatches" id="hero-spotlight-swatches">
+              <span class="swatch-label">Popular Colors:</span>
+              <span class="color-dot dot-1b active" title="Natural Black #1B" data-color="Natural Black" onclick="changeSpotlightColor('Natural Black', this)"></span>
+              <span class="color-dot dot-613" title="Honey Blonde #613" data-color="Honey Blonde" onclick="changeSpotlightColor('Honey Blonde', this)"></span>
+              <span class="color-dot dot-99j" title="Burgundy 99J" data-color="Burgundy" onclick="changeSpotlightColor('Burgundy', this)"></span>
+              <span class="color-dot dot-ombre" title="Ombre Highlight #4/27" data-color="Ombre Highlight" onclick="changeSpotlightColor('Ombre Highlight', this)"></span>
+              <span class="color-dot dot-choco" title="Chocolate Brown" data-color="Chocolate Brown" onclick="changeSpotlightColor('Chocolate Brown', this)"></span>
+              <span class="color-dot dot-maroon" title="Deep Maroon" data-color="Maroon" onclick="changeSpotlightColor('Maroon', this)"></span>
+              <span class="color-dot dot-brown" title="Chestnut Brown" data-color="Chestnut Brown" onclick="changeSpotlightColor('Chestnut Brown', this)"></span>
+              <span class="color-dot dot-ginger" title="Ginger Copper" data-color="Ginger" onclick="changeSpotlightColor('Ginger', this)"></span>
+            </div>
+
+            <div class="spotlight-specs">
+              <span><i class="fa-solid fa-check"></i> HD Invisible Lace</span>
+              <span><i class="fa-solid fa-check"></i> 180% Full Density</span>
+              <span><i class="fa-solid fa-check"></i> Pre-plucked Hairline</span>
+            </div>
+
+            <div class="spotlight-pricing">
+              <div class="prices">
+                <span class="original-price" data-usd="260">$260</span>
+                <span class="current-price" data-usd="185" id="hero-spotlight-price">$185</span>
+              </div>
+              <button class="btn btn-whatsapp" onclick="openProductModal('hair-1')">
+                <i class="fa-brands fa-whatsapp"></i> Customize & Order
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Take & Upload Original Pictures Banner -->
+  <section class="quick-upload-banner">
+    <div class="container upload-banner-container">
+      <div class="upload-banner-text">
+        <div class="badge badge-gold"><i class="fa-solid fa-camera"></i> LIVE PHOTO UPLOAD STUDIO</div>
+        <h3>Take a Picture or Upload Photos of New Stock & Hairstyles</h3>
+        <p>You can snap pictures with your mobile camera or upload from your computer. Select categories, set prices, and your photos appear instantly in the store catalog!</p>
+      </div>
+      <button class="btn btn-gold btn-lg" onclick="openUploadModal()">
+        <i class="fa-solid fa-cloud-arrow-up"></i> Take / Upload Photo Now
+      </button>
+    </div>
+  </section>
+
+  <!-- Sponsored Brands & Partner Directory Showcase -->
+  <section class="sponsored-brands-section" id="brands">
+    <div class="container">
+      <div class="section-badge-center"><i class="fa-solid fa-bullhorn"></i> ZIMBABWE BRAND ADVERTISING DIRECTORY</div>
+      <h2 class="section-title text-center">Featured Brands & Partner Companies</h2>
+      <p class="section-subtitle text-center">
+        Discover verified hair salons, fashion boutiques, shoe stores, and makeup artists across Zimbabwe.
+        <span class="ad-rate-pill"><i class="fa-solid fa-tag"></i> Advert Rate: <strong id="ad-current-rate-display">$1.00 USD / week</strong></span>
+      </p>
+
+      <!-- Dynamic Ad Tabs Bar -->
+      <div class="ad-tabs-bar">
+        <div class="ad-tabs-left">
+          <button class="ad-tab-btn active" id="tab-active-btn" onclick="switchAdTab('active')">
+            <i class="fa-solid fa-circle-check text-success"></i> Active Brands <span id="count-active-ads">0</span>
+          </button>
+          <button class="ad-tab-btn" id="tab-due-btn" onclick="switchAdTab('due')">
+            <i class="fa-solid fa-clock text-warning"></i> Payment Due Soon <span id="count-due-ads">0</span>
+          </button>
+          <button class="ad-tab-btn" id="tab-archived-btn" onclick="switchAdTab('archived')">
+            <i class="fa-solid fa-box-archive text-muted"></i> Archived Ads <span id="count-archived-ads">0</span>
+          </button>
+        </div>
+        <div class="ad-tabs-right">
+          <button class="btn btn-sm btn-outline" onclick="openAdSettingsModal()" title="Miss P Rate & Settings">
+            <i class="fa-solid fa-gear"></i> Owner Settings
+          </button>
+          <button class="btn btn-sm btn-gold" onclick="openAdvertiseModal()">
+            <i class="fa-solid fa-plus"></i> Place Ad via EcoCash
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Brands Grid Container -->
+      <div class="brands-grid" id="brands-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Catalog Section -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      <div class="catalog-header">
+        <div>
+          <span class="section-tag">INTERACTIVE CATALOG</span>
+          <h2 class="section-title">Shop 100% Virgin Hair (8"–42"), Dresses, Jeans, Bags & Shoes</h2>
+          <p style="font-size: 0.9rem; color: #6b7280;">Choose colors, sizes, and custom lengths. Click any product to customize.</p>
+        </div>
+
+        <!-- Filter Pills Bar -->
+        <div class="filter-pills-wrapper">
+          <button class="filter-pill active" data-category="all"><i class="fa-solid fa-border-all"></i> All Items</button>
+          <button class="filter-pill" data-category="hair"><i class="fa-solid fa-crown"></i> 100% Virgin Hair (8"-42")</button>
+          <button class="filter-pill" data-category="dresses"><i class="fa-solid fa-person-dress"></i> Luxury Dresses</button>
+          <button class="filter-pill" data-category="jeans"><i class="fa-solid fa-vest-patches"></i> Denim & Jeans</button>
+          <button class="filter-pill" data-category="bags"><i class="fa-solid fa-bag-shopping"></i> Luxury Bags</button>
+          <button class="filter-pill" data-category="tshirts"><i class="fa-solid fa-shirt"></i> Glam T-Shirts</button>
+          <button class="filter-pill" data-category="african"><i class="fa-solid fa-star"></i> African Traditional</button>
+          <button class="filter-pill" data-category="shoes"><i class="fa-solid fa-shoe-prints"></i> Designer Shoes</button>
+          <button class="filter-pill" data-category="salons"><i class="fa-solid fa-scissors"></i> Hairdressing & Styles</button>
+        </div>
+      </div>
+
+      <!-- Controls & Sorting Bar -->
+      <div class="catalog-controls">
+        <div class="results-count" id="results-count">Showing items</div>
+
+        <div class="controls-right">
+          <!-- Color Filter Chips -->
+          <div class="color-filter-strip">
+            <span style="font-size: 0.8rem; font-weight:700; color:#4b5563;">Color:</span>
+            <button class="color-filter-btn active" data-color="all" onclick="filterByColor('all')">All</button>
+            <button class="color-filter-btn" data-color="Natural Black" onclick="filterByColor('Natural Black')">Black</button>
+            <button class="color-filter-btn" data-color="Honey Blonde" onclick="filterByColor('Honey Blonde')">Blonde</button>
+            <button class="color-filter-btn" data-color="Burgundy" onclick="filterByColor('Burgundy')">Burgundy</button>
+            <button class="color-filter-btn" data-color="Emerald" onclick="filterByColor('Emerald')">Emerald</button>
+          </div>
+
+          <div class="sort-selector">
+            <label for="sort-select">Sort By:</label>
+            <select id="sort-select" aria-label="Sort products">
+              <option value="featured">Featured First</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Top Rated</option>
+            </select>
+          </div>
+
+          <div class="quick-stock-filter">
+            <label class="switch-container">
+              <input type="checkbox" id="stock-filter-toggle">
+              <span class="switch-slider"></span>
+              <span class="switch-label">Ready in Bulawayo</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic Product Grid -->
+      <div class="product-grid" id="product-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Hairdressing & Hairstyles Showcase (Dedicated Directory & Advertising) -->
+  <section class="salon-showcase-section" id="salons">
+    <div class="container">
+      <div class="section-badge-center"><i class="fa-solid fa-scissors"></i> PROFESSIONAL STYLIST DIRECTORY</div>
+      <h2 class="section-title text-center">Hairdressing Styles & Salon Advertising</h2>
+      <p class="section-subtitle text-center">
+        Explore trending hairstyles: knotless braids, goddess locs, frontal installs, and book top certified stylists in Bulawayo and Harare.
+      </p>
+
+      <div class="hair-styles-filter">
+        <button class="style-tab active" data-style-tag="all">All Styles</button>
+        <button class="style-tab" data-style-tag="installs">Wig & Frontal Installs</button>
+        <button class="style-tab" data-style-tag="braids">Knotless & Box Braids</button>
+        <button class="style-tab" data-style-tag="locs">Goddess & Soft Locs</button>
+        <button class="style-tab" data-style-tag="bridal">Bridal & Silk Press</button>
+      </div>
+
+      <div class="salons-grid" id="salons-grid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Shop With misspbeauty_parlor -->
+  <section class="guarantee-section">
+    <div class="container">
+      <div class="guarantee-grid">
+        <div class="guarantee-card">
+          <div class="guarantee-icon"><i class="fa-solid fa-fire-burner"></i></div>
+          <h3>100% Authentic Hair Guarantee</h3>
+          <p>Every bundle and wig is 100% certified virgin human hair. You can bleach it, dye it, curl it, or wash it without shedding.</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+          <h3>Custom Lengths & True Fit</h3>
+          <p>Full length hair from 8 inches to 42 inches, standard to 250% density, and UK 6-18 dress sizing that fits true to size.</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3>Fast Delivery Across Zimbabwe</h3>
+          <p>Same-day delivery in Bulawayo. Fast express courier to Harare, Gweru, Mutare, Chinhoyi, and Victoria Falls.</p>
+        </div>
+        <div class="guarantee-card">
+          <div class="guarantee-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <h3>Direct WhatsApp Customer Care</h3>
+          <p>Need sizing advice, custom wig plucking, or booking details? Chat directly on WhatsApp (+263 78 550 5967 / 0714895272).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-badge-center"><i class="fa-solid fa-heart"></i> VERIFIED CLIENT REVIEWS</div>
+      <h2 class="section-title text-center">Loved by Clients Across Zimbabwe</h2>
+      <p class="section-subtitle text-center">Real feedback from clients who ordered hair, dresses, shoes, and salon sessions on misspbeauty_parlor.</p>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"I ordered the 28-inch Bone Straight Brazilian wig in Natural Black with 180% density. The hair is super silky, true to length, and the HD lace melted seamlessly on my skin!"</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">TC</div>
+            <div>
+              <strong>Tariro C.</strong>
+              <span>Verified Buyer — Bulawayo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"The emerald satin gala dress and matching gold heels fit like a glove! Ordering on WhatsApp was super easy, and my order was delivered in Bulawayo within 3 hours."</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">NM</div>
+            <div>
+              <strong>Nothando M.</strong>
+              <span>Verified Buyer — Bulawayo CBD</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"I live in Harare and ordered 3 raw Cambodian bundles + closure. Courier delivered the next morning. 100% virgin human hair as advertised. Can't wait to order again!"</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">RM</div>
+            <div>
+              <strong>Ruvimbo M.</strong>
+              <span>Online Client — Harare</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advertise With Us Section -->
+  <section class="advertise-section" id="advertise">
+    <div class="container advertise-container">
+      <div class="advertise-text">
+        <span class="badge badge-gold">GROW YOUR BUSINESS</span>
+        <h2>Are You a Hair Stylist, Salon Owner, or Fashion Brand in Zimbabwe?</h2>
+        <p>
+          Feature your hair bundles, dresses, shoes, or salon portfolio directly in front of ready buyers in Bulawayo, Harare, and nationwide. Receive direct WhatsApp bookings and inquiries through <strong>misspbeauty_parlor</strong>.
+        </p>
+        <ul class="advertise-perks">
+          <li><i class="fa-solid fa-circle-check"></i> Direct WhatsApp leads sent straight to your phone</li>
+          <li><i class="fa-solid fa-circle-check"></i> Verified Partner badge on your brand showcase</li>
+          <li><i class="fa-solid fa-circle-check"></i> High-resolution portfolio gallery of your hairstyles & products</li>
+          <li><i class="fa-solid fa-circle-check"></i> Banner advertisements on category pages</li>
+        </ul>
+        <button class="btn btn-gold btn-lg" onclick="openAdvertiseModal()">
+          <i class="fa-solid fa-bullhorn"></i> Advertise With Miss P Now
+        </button>
+      </div>
+
+      <div class="advertise-card-preview">
+        <div class="preview-badge">LIVE PREVIEW OF YOUR AD ON MISSPBEAUTY_PARLOR</div>
+        <div class="preview-box">
+          <div class="preview-header">
+            <div class="preview-avatar"><i class="fa-solid fa-store"></i></div>
+            <div>
+              <h4>Your Brand / Salon Name</h4>
+              <p>Bulawayo / Harare / Nationwide</p>
+            </div>
+            <span class="verified-tag"><i class="fa-solid fa-circle-check"></i> Verified</span>
+          </div>
+          <div class="preview-images">
+            <div class="p-img p-img-1"></div>
+            <div class="p-img p-img-2"></div>
+            <div class="p-img p-img-3"></div>
+          </div>
+          <p class="preview-desc">"Specializing in luxury raw hair bundles, flawless custom wig installs, and couture fashion."</p>
+          <button class="btn btn-whatsapp w-100"><i class="fa-brands fa-whatsapp"></i> Chat With [Your Business]</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Customizer Modal -->
+  <div class="modal-backdrop" id="product-modal" aria-hidden="true">
+    <div class="modal-dialog product-modal-dialog">
+      <button class="modal-close-btn" onclick="closeProductModal()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body product-modal-body" id="product-modal-content">
+        <!-- Rendered dynamically via JavaScript with color swatches, lengths, sizes -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Size & Length Guide Modal -->
+  <div class="modal-backdrop" id="size-guide-modal" aria-hidden="true">
+    <div class="modal-dialog size-guide-dialog">
+      <button class="modal-close-btn" onclick="closeSizeGuideModal()" aria-label="Close size guide">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body size-guide-body">
+        <div class="modal-header-badge"><i class="fa-solid fa-ruler-combined"></i> SIZE & LENGTH GUIDE</div>
+        <h2>Find Your Perfect Fit & Hair Length</h2>
+        <p>Use our interactive charts below to select the right wig length, dress size, and shoe measurement.</p>
+
+        <!-- Tabs for Hair, Dresses, Jeans, Shoes -->
+        <div class="guide-tabs">
+          <button class="guide-tab-btn active" onclick="switchGuideTab('hair-guide')">💇‍♀️ Hair Lengths (8"-42")</button>
+          <button class="guide-tab-btn" onclick="switchGuideTab('dress-guide')">👗 Dress Sizing</button>
+          <button class="guide-tab-btn" onclick="switchGuideTab('jeans-guide')">👖 Denim & Jeans</button>
+          <button class="guide-tab-btn" onclick="switchGuideTab('shoe-guide')">👠 Shoe Sizes</button>
+        </div>
+
+        <!-- Hair Guide Tab -->
+        <div class="guide-tab-content active" id="hair-guide">
+          <table class="guide-table">
+            <thead>
+              <tr>
+                <th>Length (Inches)</th>
+                <th>Where It Falls on Body</th>
+                <th>Best For</th>
+                <th>Look Style</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>8" - 10"</strong></td><td>Chin & Neck Length</td><td>Blunt-Cut Pixie Bob</td><td>Chic & Modern</td></tr>
+              <tr><td><strong>12" - 14"</strong></td><td>Shoulder / Collarbone</td><td>Chic Everyday Bob</td><td>Professional & Crisp</td></tr>
+              <tr><td><strong>16" - 18"</strong></td><td>Armpit / Upper Bust</td><td>Natural Daily Length</td><td>Low Maintenance</td></tr>
+              <tr><td><strong>20" - 22"</strong></td><td>Mid-Back / Bra Strap</td><td>Most Popular Glamour</td><td>Versatile Everyday Glam</td></tr>
+              <tr><td><strong>24" - 26"</strong></td><td>Waist Length</td><td>Show-stopping Length</td><td>Parties & Galas</td></tr>
+              <tr><td><strong>28" - 32"</strong></td><td>Hip & Tailbone Length</td><td>Super Long Baddie Look</td><td>Extreme Luxury</td></tr>
+              <tr><td><strong>34" - 38"</strong></td><td>Mid-Thigh Length</td><td>Ultra Dramatic Drop</td><td>High-Fashion Editorial</td></tr>
+              <tr><td><strong>40" - 42"</strong></td><td>Ankle & Floor Length</td><td>Extreme Floor Length</td><td>Ultimate Showstopper</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Dress Guide Tab -->
+        <div class="guide-tab-content" id="dress-guide" style="display:none;">
+          <table class="guide-table">
+            <thead>
+              <tr>
+                <th>UK Size</th>
+                <th>Standard</th>
+                <th>Bust (inches)</th>
+                <th>Waist (inches)</th>
+                <th>Hips (inches)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>UK 6</strong></td><td>XS</td><td>31 - 32</td><td>24 - 25</td><td>34 - 35</td></tr>
+              <tr><td><strong>UK 8</strong></td><td>S</td><td>33 - 34</td><td>26 - 27</td><td>36 - 37</td></tr>
+              <tr><td><strong>UK 10</strong></td><td>M</td><td>35 - 36</td><td>28 - 29</td><td>38 - 39</td></tr>
+              <tr><td><strong>UK 12</strong></td><td>L</td><td>37 - 38</td><td>30 - 31</td><td>40 - 41</td></tr>
+              <tr><td><strong>UK 14</strong></td><td>XL</td><td>39 - 41</td><td>32 - 34</td><td>42 - 44</td></tr>
+              <tr><td><strong>UK 16</strong></td><td>2XL</td><td>42 - 44</td><td>35 - 37</td><td>45 - 47</td></tr>
+              <tr><td><strong>UK 18</strong></td><td>3XL</td><td>45 - 47</td><td>38 - 40</td><td>48 - 50</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Jeans Guide Tab -->
+        <div class="guide-tab-content" id="jeans-guide" style="display:none;">
+          <table class="guide-table">
+            <thead>
+              <tr>
+                <th>Waist Size</th>
+                <th>UK Equivalent</th>
+                <th>Natural Waist (inches)</th>
+                <th>Hips (inches)</th>
+                <th>Fit Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>26</strong></td><td>UK 6 (XS)</td><td>25 - 26</td><td>35 - 36</td><td>Skinny / High-Waist Sculpt</td></tr>
+              <tr><td><strong>28</strong></td><td>UK 8 (S)</td><td>27 - 28</td><td>37 - 38</td><td>Regular / Slim Stretch</td></tr>
+              <tr><td><strong>30</strong></td><td>UK 10 (M)</td><td>29 - 30</td><td>39 - 40</td><td>Comfort Stretch Curve</td></tr>
+              <tr><td><strong>32</strong></td><td>UK 12 (L)</td><td>31 - 32</td><td>41 - 42</td><td>Hourglass Sculpt</td></tr>
+              <tr><td><strong>34</strong></td><td>UK 14 (XL)</td><td>33 - 34</td><td>43 - 44</td><td>Relaxed Wide-Leg</td></tr>
+              <tr><td><strong>36</strong></td><td>UK 16 (2XL)</td><td>35 - 37</td><td>45 - 47</td><td>Plus Curve Contour</td></tr>
+              <tr><td><strong>38</strong></td><td>UK 18 (3XL)</td><td>38 - 40</td><td>48 - 50</td><td>Supreme Stretch Fit</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Shoe Guide Tab -->
+        <div class="guide-tab-content" id="shoe-guide" style="display:none;">
+          <table class="guide-table">
+            <thead>
+              <tr>
+                <th>EU Size</th>
+                <th>UK Size</th>
+                <th>US Size</th>
+                <th>Foot Length (cm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>EU 36</strong></td><td>UK 3.5</td><td>US 5.5</td><td>22.5 cm</td></tr>
+              <tr><td><strong>EU 37</strong></td><td>UK 4</td><td>US 6.5</td><td>23.0 cm</td></tr>
+              <tr><td><strong>EU 38</strong></td><td>UK 5</td><td>US 7.5</td><td>24.0 cm</td></tr>
+              <tr><td><strong>EU 39</strong></td><td>UK 6</td><td>US 8.5</td><td>24.5 cm</td></tr>
+              <tr><td><strong>EU 40</strong></td><td>UK 7</td><td>US 9.5</td><td>25.5 cm</td></tr>
+              <tr><td><strong>EU 41</strong></td><td>UK 8</td><td>US 10.5</td><td>26.0 cm</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <button class="btn btn-primary w-100 mt-2" onclick="closeSizeGuideModal()">Got It, Back to Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Slide Drawer -->
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop">
+    <aside class="cart-drawer" id="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3><i class="fa-solid fa-bag-shopping"></i> Your Shopping Bag (<span id="cart-drawer-count">0</span>)</h3>
+        <button class="drawer-close-btn" id="cart-close-btn" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="cart-drawer-items" id="cart-drawer-items">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal:</span>
+          <strong id="cart-subtotal">$0.00</strong>
+        </div>
+        <div class="cart-summary-row delivery-note">
+          <span><i class="fa-solid fa-truck"></i> Delivery:</span>
+          <span>Free delivery in Bulawayo CBD • Fast courier nationwide</span>
+        </div>
+
+        <button class="btn btn-whatsapp btn-checkout" id="cart-whatsapp-checkout-btn">
+          <i class="fa-brands fa-whatsapp"></i> Checkout on WhatsApp (+263 78 550 5967)
+        </button>
+        <button class="btn btn-secondary w-100" onclick="clearCart()">
+          <i class="fa-solid fa-trash-can"></i> Clear Bag
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Wishlist Slide Drawer -->
+  <div class="cart-drawer-backdrop" id="wishlist-drawer-backdrop">
+    <aside class="cart-drawer" id="wishlist-drawer">
+      <div class="cart-drawer-header">
+        <h3><i class="fa-solid fa-heart"></i> Your Saved Items (<span id="wishlist-drawer-count">0</span>)</h3>
+        <button class="drawer-close-btn" id="wishlist-close-btn" aria-label="Close wishlist"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="cart-drawer-items" id="wishlist-drawer-items">
+        <!-- Rendered dynamically -->
+      </div>
+    </aside>
+  </div>
+
+  <!-- TAKE & UPLOAD ORIGINAL PICTURES MODAL -->
+  <div class="modal-backdrop" id="upload-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeUploadModal()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body form-modal-body">
+        <div class="modal-header-badge"><i class="fa-solid fa-camera"></i> PHOTO UPLOAD STUDIO</div>
+        <h2>Take or Upload Original Pictures</h2>
+        <p>Snap a photo directly with your camera or select an image from your files. It will be added immediately to your store or hairstyle showcase!</p>
+
+        <form id="upload-item-form" onsubmit="handleUploadSubmit(event)">
+          <div class="photo-upload-zone" id="photo-upload-zone" onclick="document.getElementById('upload-file-input').click()">
+            <input type="file" id="upload-file-input" accept="image/*" capture="environment" style="display: none;" onchange="previewSelectedImage(event)">
+            <div id="upload-placeholder">
+              <i class="fa-solid fa-cloud-arrow-up photo-icon"></i>
+              <strong>Tap to take a photo or select an image</strong>
+              <span>Supports JPG, PNG, WEBP from your phone camera or gallery</span>
+            </div>
+            <img id="upload-preview-img" class="upload-preview-img" alt="Uploaded photo preview" style="display: none;">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="upload-category">Category *</label>
+              <select id="upload-category" required>
+                <option value="hair">100% Human Hair & Wigs</option>
+                <option value="dresses">Luxury Dresses</option>
+                <option value="shoes">Designer Shoes</option>
+                <option value="salons">Hairdressing Style / Salon Work</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="upload-price">Price in USD ($) *</label>
+              <input type="number" id="upload-price" required placeholder="e.g. 185" min="1" step="1">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="upload-title">Product Name or Hairstyle Title *</label>
+            <input type="text" id="upload-title" required placeholder="e.g. 30-inch Bone Straight Peruvian Frontal Wig or Knotless Braids">
+          </div>
+
+          <div class="form-group">
+            <label for="upload-desc">Description & Authenticity Notes *</label>
+            <textarea id="upload-desc" rows="3" required placeholder="e.g. 100% human hair, double drawn, zero shedding, can be dyed to #613."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="upload-options">Options / Sizes / Lengths (comma separated)</label>
+            <input type="text" id="upload-options" placeholder="e.g. 18 inches, 22 inches, 26 inches, 30 inches">
+          </div>
+
+          <button type="submit" class="btn btn-gold w-100 btn-lg" id="publish-item-btn">
+            <i class="fa-solid fa-sparkles"></i> Publish Picture to Store Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Multi-Step EcoCash Advertising Modal -->
+  <div class="modal-backdrop" id="advertise-modal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <button class="modal-close-btn" onclick="closeAdvertiseModal()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body form-modal-body">
+        <div class="modal-header-badge"><i class="fa-solid fa-bullhorn"></i> PARTNER WITH MISSPBEAUTY_PARLOR</div>
+        <h2>Advertise Your Salon, Hair or Fashion Brand</h2>
+        <p>Upload your staff photo or product image and pay directly via EcoCash to <strong>0785505967</strong>.</p>
+
+        <!-- Step Indicator -->
+        <div class="modal-steps-indicator">
+          <div class="modal-step-item active" id="indicator-step-1">
+            <span class="modal-step-num">1</span>
+            <span>Ad & Image Details</span>
+          </div>
+          <div class="modal-step-line"></div>
+          <div class="modal-step-item" id="indicator-step-2">
+            <span class="modal-step-num">2</span>
+            <span>EcoCash Payment</span>
+          </div>
+        </div>
+
+        <!-- Step 1: Ad & Image Details Form -->
+        <div id="ad-step-1">
+          <!-- Image Upload Dropzone -->
+          <div class="form-group">
+            <label>Upload Staff / Product / Salon Showcase Photo *</label>
+            <div class="ad-upload-dropzone" onclick="document.getElementById('ad-image-file').click()">
+              <input type="file" id="ad-image-file" accept="image/*" style="display: none;" onchange="handleAdImageUpload(event)">
+              <div id="ad-dropzone-placeholder">
+                <i class="fa-solid fa-cloud-arrow-up text-primary" style="font-size: 2.2rem; margin-bottom: 0.5rem; display:block;"></i>
+                <strong>Click to choose photo or take a picture</strong>
+                <span style="font-size: 0.8rem; color: #6b7280; display:block; margin-top: 0.25rem;">Supports JPG, PNG, WEBP from your phone camera or gallery</span>
+              </div>
+            </div>
+            <!-- Live Preview Box -->
+            <div id="ad-preview-container" class="ad-preview-thumb-box" style="display: none;">
+              <img id="ad-preview-image" src="" alt="Advert Preview">
+              <button type="button" class="btn-remove-thumb" onclick="removeAdImage()" title="Remove photo">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <!-- Direct URL input fallback -->
+            <div style="margin-top: 0.5rem;">
+              <label for="ad-image-url-input" style="font-size: 0.78rem; color: #6b7280;">Or paste direct internet photo link (optional):</label>
+              <input type="url" id="ad-image-url-input" placeholder="https://..." oninput="handleAdImageUrl(this.value)" style="font-size: 0.85rem; padding: 0.4rem 0.75rem;">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ad-business-name">Business / Salon Name *</label>
+              <input type="text" id="ad-business-name" required placeholder="e.g. Royal Braids Studio or Bulawayo Glam">
+            </div>
+            <div class="form-group">
+              <label for="ad-category">Category *</label>
+              <select id="ad-category" required>
+                <option value="100% Human Hair & Wigs">100% Human Hair & Wigs</option>
+                <option value="Hairdressing & Braids">Hair Salon & Braiding Stylist</option>
+                <option value="Dresses & Fashion">Dresses & Fashion Boutique</option>
+                <option value="Shoes & Footwear">Luxury Shoes & Heels</option>
+                <option value="Nails & Makeup">Nails & Makeup Glam</option>
+                <option value="Bags & Accessories">Bags & Accessories</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ad-city">Location / City *</label>
+              <select id="ad-city" required>
+                <option value="Bulawayo CBD">Bulawayo (CBD / Fife St)</option>
+                <option value="Bulawayo Suburbs">Bulawayo (Suburbs / Town)</option>
+                <option value="Harare CBD">Harare CBD</option>
+                <option value="Harare Northern Suburbs">Harare (Avondale / Borrowdale)</option>
+                <option value="Gweru">Gweru</option>
+                <option value="Mutare">Mutare</option>
+                <option value="Nationwide Delivery">Nationwide Zimbabwe</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="ad-whatsapp">WhatsApp Number for Customer Inquiries *</label>
+              <input type="tel" id="ad-whatsapp" required placeholder="+263 7..." pattern="[0-9+ ]{9,16}">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="ad-services">Services Offered, Products & Special Offers *</label>
+            <textarea id="ad-services" rows="2" required placeholder="e.g. Knotless box braids from $20, Bone straight installs from $25, Free styling with every wig purchase!"></textarea>
+          </div>
+
+          <!-- Social Media Profiles (TikTok, Instagram, Facebook) -->
+          <div class="form-group">
+            <label style="display:flex; justify-content:space-between; align-items:center;">
+              <span><i class="fa-solid fa-share-nodes" style="color:var(--primary);"></i> Link Your Social Media (TikTok, Instagram, Facebook)</span>
+              <span style="font-size:0.75rem; color:#ff2d87; font-weight:600;">Optional</span>
+            </label>
+            <div class="form-row" style="margin-bottom: 0.35rem;">
+              <div class="form-group" style="margin-bottom: 0.5rem;">
+                <div class="social-input-wrapper">
+                  <i class="fa-brands fa-tiktok social-icon tiktok"></i>
+                  <input type="text" id="ad-tiktok" placeholder="TikTok: @handle or link">
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom: 0.5rem;">
+                <div class="social-input-wrapper">
+                  <i class="fa-brands fa-instagram social-icon instagram"></i>
+                  <input type="text" id="ad-instagram" placeholder="Instagram: @handle or link">
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom: 0.5rem;">
+                <div class="social-input-wrapper">
+                  <i class="fa-brands fa-facebook social-icon facebook"></i>
+                  <input type="text" id="ad-facebook" placeholder="Facebook: Page name or link">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duration Selector -->
+          <div class="form-group">
+            <label>Select Advert Duration *</label>
+            <div class="ad-duration-selector" id="ad-duration-selector">
+              <!-- Rendered dynamically based on current rate -->
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-primary w-100 btn-lg" onclick="proceedToEcoCashPayment()">
+            <i class="fa-solid fa-arrow-right"></i> Continue to EcoCash Payment (<span id="btn-total-fee">$1.00</span>)
+          </button>
+        </div>
+
+        <!-- Step 2: EcoCash Payment Details -->
+        <div id="ad-step-2" style="display: none;">
+          <div class="ecocash-payment-card">
+            <div class="ecocash-card-header">
+              <div class="ecocash-logo-title">
+                <i class="fa-solid fa-mobile-screen-button"></i> EcoCash Instant Transfer
+              </div>
+              <span class="ecocash-chip-badge">DIRECT TO MISS P</span>
+            </div>
+
+            <div class="ecocash-details-grid">
+              <div class="ecocash-detail-item">
+                <label>Send Money To (EcoCash Number)</label>
+                <strong>0785505967</strong>
+              </div>
+              <div class="ecocash-detail-item">
+                <label>Account Name</label>
+                <strong>misspbeauty_parlor</strong>
+              </div>
+              <div class="ecocash-detail-item">
+                <label>Selected Duration</label>
+                <strong id="ecocash-duration-summary">1 Week</strong>
+              </div>
+              <div class="ecocash-detail-item">
+                <label>Weekly Rate</label>
+                <strong id="ecocash-rate-summary">$1.00 USD</strong>
+              </div>
+            </div>
+
+            <div class="ecocash-amount-display">
+              <div>
+                <span>Total Transfer Amount:</span>
+                <p style="margin: 0; font-size: 0.75rem; color: #bae6fd;">Instant EcoCash USD / ZiG transfer</p>
+              </div>
+              <h3 id="ecocash-total-display">$1.00 USD</h3>
+            </div>
+
+            <div class="ecocash-ussd-action">
+              <span>Quick USSD Code:</span>
+              <span class="ecocash-ussd-code" id="ecocash-ussd-code">*151*1*1*0785505967*1#</span>
+              <a id="ecocash-dial-link" href="tel:*151*1*1*0785505967*1%23" class="btn btn-sm btn-gold" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;">
+                <i class="fa-solid fa-phone"></i> Dial
+              </a>
+            </div>
+          </div>
+
+          <div class="notice-box-warning">
+            <i class="fa-solid fa-circle-info"></i> <strong>EcoCash Transfer Steps:</strong>
+            Dial *151# &rarr; Select 1 (Send Money) &rarr; Enter <strong>0785505967</strong> &rarr; Enter amount <strong id="instruction-amount">$1.00</strong> &rarr; Confirm PIN. Then paste your confirmation details below!
+          </div>
+
+          <form id="ecocash-confirm-form" onsubmit="submitEcoCashAdvert(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="advertiser-ecocash-num">Your EcoCash Phone Number (Sender) *</label>
+                <input type="tel" id="advertiser-ecocash-num" required placeholder="e.g. 0771234567" pattern="[0-9+ ]{9,16}">
+              </div>
+              <div class="form-group">
+                <label for="advertiser-approval-code">EcoCash Approval / Reference Code *</label>
+                <input type="text" id="advertiser-approval-code" required placeholder="e.g. MP261110.1234 or SMS reference" style="text-transform: uppercase;">
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; margin-top: 1rem;">
+              <button type="button" class="btn btn-outline" style="flex: 1;" onclick="backToStep1()">
+                <i class="fa-solid fa-arrow-left"></i> Edit Details
+              </button>
+              <button type="submit" class="btn btn-gold btn-lg" style="flex: 2;">
+                <i class="fa-solid fa-circle-check"></i> Complete & Publish Ad Now
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Miss P Owner Ad Settings Modal -->
+  <div class="modal-backdrop" id="ad-settings-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeAdSettingsModal()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body form-modal-body">
+        <div class="modal-header-badge"><i class="fa-solid fa-crown"></i> OWNER CONTROLS - MISSPBEAUTY_PARLOR</div>
+        <h2>Advertising Rates & EcoCash Settings</h2>
+        <p>Change your weekly advertising charges and view your EcoCash receiving account details.</p>
+
+        <form id="ad-settings-form" onsubmit="saveAdSettings(event)">
+          <div class="form-group">
+            <label for="setting-weekly-rate">Weekly Advert Rate in USD ($) *</label>
+            <input type="number" id="setting-weekly-rate" required min="0.5" step="0.25" placeholder="1.00">
+            <span style="font-size: 0.78rem; color: #6b7280; display:block; margin-top: 0.25rem;">Current default is $1.00 per week. Multi-week options (2, 3, 4 weeks) will scale automatically.</span>
+          </div>
+
+          <div class="form-group">
+            <label>EcoCash Receiving Mobile Number</label>
+            <input type="text" value="0785505967 (+263 78 550 5967)" readonly style="background: #f3f4f6; cursor: not-allowed; font-weight: 700;">
+            <span style="font-size: 0.78rem; color: #059669; display:block; margin-top: 0.25rem;"><i class="fa-solid fa-circle-check"></i> Connected directly to Miss P's EcoCash wallet.</span>
+          </div>
+
+          <div class="form-group">
+            <label>Auto-Archiving Rule</label>
+            <div style="background: #fff8fb; border: 1px solid #fbcfe8; padding: 0.75rem; border-radius: var(--radius-sm); font-size: 0.82rem; color: #42072b;">
+              <i class="fa-solid fa-shield-halved"></i> <strong>Automatic Protection:</strong> When an advert's paid duration ends, the system automatically marks it as <em>Payment Due</em> and archives it if unpaid, removing it from the active showcase into the archived directory.
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 btn-lg">
+            <i class="fa-solid fa-floppy-disk"></i> Save Rate & Settings
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ad Renewal Modal -->
+  <div class="modal-backdrop" id="ad-renew-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeRenewAdModal()" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body form-modal-body">
+        <div class="modal-header-badge"><i class="fa-solid fa-clock-rotate-left"></i> RENEW ADVERT</div>
+        <h2 id="renew-modal-title">Renew Advert via EcoCash</h2>
+        <p>Extend your advert on misspbeauty_parlor to stay active on Zimbabwe's beauty hub.</p>
+
+        <form id="renew-form" onsubmit="submitAdRenewal(event)">
+          <input type="hidden" id="renew-ad-id">
+
+          <div class="form-group">
+            <label>Select Extension Duration</label>
+            <div class="ad-duration-selector" id="renew-duration-selector">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- EcoCash Box -->
+          <div class="ecocash-payment-card" style="padding: 1rem; margin: 1rem 0;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:#e0f2fe;">Send EcoCash to: <strong>0785505967</strong></span>
+              <strong style="color:#ffd166; font-size:1.2rem;" id="renew-total-display">$1.00 USD</strong>
+            </div>
+            <div style="margin-top:0.5rem; font-size:0.75rem; color:#bae6fd;" id="renew-ussd-text">USSD: *151*1*1*0785505967*1#</div>
+          </div>
+
+          <div class="form-group">
+            <label for="renew-ecocash-num">Your EcoCash Number *</label>
+            <input type="tel" id="renew-ecocash-num" required placeholder="077... or 078...">
+          </div>
+
+          <div class="form-group">
+            <label for="renew-approval-code">EcoCash Approval Code *</label>
+            <input type="text" id="renew-approval-code" required placeholder="e.g. MP2611... or reference" style="text-transform: uppercase;">
+          </div>
+
+          <button type="submit" class="btn btn-gold w-100 btn-lg">
+            <i class="fa-solid fa-rotate"></i> Confirm EcoCash & Reactivate Ad
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/263785505967?text=Hello%20misspbeauty_parlor!%20I'm%20browsing%20your%20website%20and%20would%20love%20some%20help." target="_blank" class="floating-whatsapp-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+    <div class="whatsapp-pulse"></div>
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-label">WhatsApp Store</span>
+  </a>
+
+  <!-- Toast Notification -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Footer -->
+  
+  <!-- AFRICAN TRADITIONAL & LOBOLA SECTION -->
+  <section class="african-section" id="african-section">
+    <div class="container text-center">
+      <div class="section-badge-center">🌍 AFRICAN HERITAGE</div>
+      <h2 class="section-title">African Traditional &amp; Lobola Attire</h2>
+      <p style="color:#42072b;max-width:620px;margin:0 auto 24px;font-size:14px;line-height:1.6;">
+        Celebrate your culture in style. Authentic chitenge, Ankara, shweshwe &amp; kente fabrics
+        crafted for lobola ceremonies, umembeso, traditional weddings &amp; everyday African pride.
+        SADC-wide delivery: Zimbabwe 🇿🇼 &bull; South Africa 🇿🇦 &bull; Zambia 🇿🇲 &bull; Botswana 🇧🇼
+      </p>
+      <div class="african-print-colors">
+        <button class="african-print-btn active">
+          <span class="african-print-swatch" style="background:#1a3c8f"></span> Ankara Blue
+        </button>
+        <button class="african-print-btn">
+          <span class="african-print-swatch" style="background:#d4a017"></span> Kente Gold
+        </button>
+        <button class="african-print-btn">
+          <span class="african-print-swatch" style="background:#8b0000"></span> Shweshwe Red
+        </button>
+        <button class="african-print-btn">
+          <span class="african-print-swatch" style="background:#7b2d8b"></span> Chitenge Violet
+        </button>
+      </div>
+      <a href="#catalog" class="btn btn-primary" onclick="selectCategoryFilter('african')" style="display:inline-flex;align-items:center;gap:8px;margin-top:4px;">
+        <i class="fa-solid fa-shirt"></i> Shop African Traditional Collection
+      </a>
+    </div>
+  </section>
+
+  <!-- BRAND AGENTS & NATIONWIDE RUNNERS -->
+  <section class="brand-agents-section" id="agents">
+    <div class="container text-center">
+      <div class="section-badge-center">🌟 BRAND AGENTS &amp; RUNNERS</div>
+      <h2 class="section-title">Order via misspbeauty_parlor — SADC Brand Agent</h2>
+      <p class="section-subtitle">
+        Your trusted local agent for SHEIN, Avon, Inuka &amp; more. We place bulk &amp; individual orders
+        and deliver across Zimbabwe, South Africa, Zambia &amp; Botswana nationwide.
+      </p>
+      <div class="agents-brands-grid">
+        <div class="agent-brand-card">
+          <div class="agent-brand-logo shein-logo">S</div>
+          <div class="agent-brand-name">SHEIN Agent</div>
+          <div class="agent-brand-desc">Fashion hauls, trendy outfits, accessories &amp; home decor ordered on your behalf. No international card needed.</div>
+          <div class="agent-coverage-badges">
+            <span class="coverage-badge">🇿🇼 Zimbabwe</span>
+            <span class="coverage-badge">🇿🇦 South Africa</span>
+            <span class="coverage-badge">🇿🇲 Zambia</span>
+            <span class="coverage-badge">🇧🇼 Botswana</span>
+          </div>
+          <a class="agent-whatsapp-btn" href="https://wa.me/263785505967?text=Hi%20Miss%20P!%20I%20want%20to%20order%20from%20SHEIN%20%F0%9F%9B%8D" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Order via SHEIN
+          </a>
+        </div>
+        <div class="agent-brand-card">
+          <div class="agent-brand-logo avon-logo">A</div>
+          <div class="agent-brand-name">Avon Agent</div>
+          <div class="agent-brand-desc">Skincare, makeup, fragrances &amp; wellness from Avon's full catalogue. Local prices, doorstep delivery.</div>
+          <div class="agent-coverage-badges">
+            <span class="coverage-badge">🇿🇼 Zimbabwe</span>
+            <span class="coverage-badge">🇿🇦 South Africa</span>
+            <span class="coverage-badge">🇿🇲 Zambia</span>
+            <span class="coverage-badge">🇧🇼 Botswana</span>
+          </div>
+          <a class="agent-whatsapp-btn" href="https://wa.me/263785505967?text=Hi%20Miss%20P!%20I%20want%20to%20order%20Avon%20products%20%F0%9F%92%84" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Order Avon Products
+          </a>
+        </div>
+        <div class="agent-brand-card">
+          <div class="agent-brand-logo inuka-logo">I</div>
+          <div class="agent-brand-name">Inuka Agent</div>
+          <div class="agent-brand-desc">Premium African-inspired fragrances, skincare &amp; wellness. Inuka products at your doorstep across SADC.</div>
+          <div class="agent-coverage-badges">
+            <span class="coverage-badge">🇿🇼 Zimbabwe</span>
+            <span class="coverage-badge">🇿🇦 South Africa</span>
+            <span class="coverage-badge">🇿🇲 Zambia</span>
+            <span class="coverage-badge">🇧🇼 Botswana</span>
+          </div>
+          <a class="agent-whatsapp-btn" href="https://wa.me/263785505967?text=Hi%20Miss%20P!%20I%20want%20Inuka%20products%20%F0%9F%8C%BA" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Order Inuka Products
+          </a>
+        </div>
+        <div class="agent-brand-card">
+          <div class="agent-brand-logo intl-logo">🌍</div>
+          <div class="agent-brand-name">International Brands</div>
+          <div class="agent-brand-desc">Can't find it locally? Send us the link — we source from any international brand. Fashion, beauty, electronics &amp; more.</div>
+          <div class="agent-coverage-badges">
+            <span class="coverage-badge">🇿🇼 Zimbabwe</span>
+            <span class="coverage-badge">🇿🇦 South Africa</span>
+            <span class="coverage-badge">🇿🇲 Zambia</span>
+            <span class="coverage-badge">🇧🇼 Botswana</span>
+          </div>
+          <a class="agent-whatsapp-btn" href="https://wa.me/263785505967?text=Hi%20Miss%20P!%20I%20need%20help%20sourcing%20an%20international%20product%20%F0%9F%8C%8D" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Source Any Brand
+          </a>
+        </div>
+      </div>
+      <div class="agents-how-it-works">
+        <h4>✨ How It Works</h4>
+        <div class="how-steps">
+          <div class="how-step">
+            <div class="step-number">1</div>
+            <div class="step-text">WhatsApp Miss P with your order details or product link</div>
+          </div>
+          <div class="how-step">
+            <div class="step-number">2</div>
+            <div class="step-text">We quote you total cost including delivery to your city</div>
+          </div>
+          <div class="how-step">
+            <div class="step-number">3</div>
+            <div class="step-text">Pay via EcoCash 0785505967 or mobile money</div>
+          </div>
+          <div class="how-step">
+            <div class="step-number">4</div>
+            <div class="step-text">We order &amp; deliver straight to you — SADC-wide!</div>
+          </div>
+        </div>
+      </div>
+      <div class="agents-cta-row">
+        <a class="btn btn-whatsapp" href="https://wa.me/263785505967?text=Hi%20Miss%20P!%20Brand%20agent%20order%20%F0%9F%8C%9F" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp to Order Now
+        </a>
+        <a class="btn btn-primary" href="tel:+2630714895272">
+          <i class="fa-solid fa-phone"></i> Call: 0714 895 272
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <i class="fa-solid fa-crown text-gold"></i>
+          <span>misspbeauty_parlor</span>
+        </div>
+        <p class="footer-desc">
+          Bulawayo, Zimbabwe's premier online beauty & fashion hub. Supplying 100% virgin human hair wigs, couture dresses, designer footwear, and connecting clients with verified top hairdressers across Zimbabwe.
+        </p>
+        <div class="footer-contact-details">
+          <p><i class="fa-brands fa-whatsapp text-whatsapp"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/263785505967">+263 78 550 5967</a></p>
+          <p><i class="fa-solid fa-phone text-gold"></i> <strong>Calls:</strong> <a href="tel:0714895272">0714895272</a></p>
+          <p><i class="fa-solid fa-location-dot"></i> <strong>Location:</strong> Bulawayo CBD (Fife Street), Zimbabwe</p>
+        </div>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/263785505967" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product Collections</h4>
+        <ul>
+          <li><a href="#catalog" onclick="filterCategory('hair')">100% Virgin Human Hair</a></li>
+          <li><a href="#catalog" onclick="filterCategory('hair')">HD Frontal & Closure Wigs</a></li>
+          <li><a href="#catalog" onclick="filterCategory('dresses')">Cocktail & Evening Gowns</a></li>
+          <li><a href="#catalog" onclick="filterCategory('shoes')">Designer Stiletto Heels</a></li>
+          <li><a href="#salons">Knotless Braids & Locs</a></li>
+          <li><a href="#salons">Book Salon in Bulawayo</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Locations & Delivery</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot text-gold"></i> <strong>Headquarters:</strong> Bulawayo CBD (Fife Street), Zimbabwe</li>
+          <li><i class="fa-solid fa-truck-fast"></i> Same-day delivery in Bulawayo CBD</li>
+          <li><i class="fa-solid fa-plane"></i> Express courier to Harare, Gweru, Mutare & Nationwide</li>
+          <li><i class="fa-solid fa-clock"></i> Mon - Sat: 8:00 AM - 6:00 PM</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Brand Advertising</h4>
+        <p>Want to feature your salon, boutique, or beauty brand on misspbeauty_parlor? We advertise for local and nationwide beauty businesses.</p>
+        <button class="btn btn-sm btn-gold mt-2" onclick="openAdvertiseModal()">
+          <i class="fa-solid fa-bullhorn"></i> Partner With Miss P
+        </button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 misspbeauty_parlor • Bulawayo, Zimbabwe. All Rights Reserved.</p>
+        <div class="payment-badges">
+          <span><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery (USD)</span>
+          <span><i class="fa-solid fa-mobile-screen"></i> EcoCash / Innbucks</span>
+          <span><i class="fa-brands fa-whatsapp"></i> WhatsApp Orders</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

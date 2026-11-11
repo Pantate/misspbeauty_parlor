@@ -1,0 +1,7 @@
+# Temporary development & scratch files
+scratch/
+__pycache__/
+*.pyc
+.system_generated/
+.DS_Store
+Thumbs.db
