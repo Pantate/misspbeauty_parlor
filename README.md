@@ -31,15 +31,6 @@ An interactive, responsive e-commerce and salon hub for **misspbeauty_parlor** b
 
 ---
 
-## 🚀 How to Run the Website
-
-```powershell
-python "C:\Users\rejoi\OneDrive\Desktop\misspbeauty_parlor\server.py"
-```
-Starts the local server at `http://localhost:8081` and automatically opens your web browser.
-
----
-
 ## 📞 Store Contacts
 - **Primary WhatsApp / EcoCash**: `+263 78 550 5967` (`0785505967`)
 - **Secondary Call Line**: `0714895272`
